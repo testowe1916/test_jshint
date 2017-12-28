@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:html",
+    "test": "npm run test:html && npm run test:js",
     "test:html": "glob-run nu-html-checker *.html",
+    "test:js": "npm run jshint",
     "build": "npm run build:sass && npm run build:autoprefixer && npm run test",
     "build:sass": "sass --sourcemap=none --update sass:css",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
